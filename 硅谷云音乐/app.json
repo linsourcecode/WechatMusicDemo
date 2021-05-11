@@ -4,7 +4,8 @@
     "pages/search/search",
     "pages/video/video",
     "pages/login/login",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/songs/songs"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap.json",
@@ -60,7 +61,10 @@
   ],
   "preloadRule": {
     "pages/index/index": {
-      "packages": ["songPackage", "other"]
+      "packages": [
+        "songPackage",
+        "other"
+      ]
     }
   }
 }

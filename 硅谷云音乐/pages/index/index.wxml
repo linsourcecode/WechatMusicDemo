@@ -14,7 +14,7 @@
     </view>
     <view class="navItem" bindtap="toOther">
       <text class="iconfont icon-gedan1"></text>
-      <text>私人FM</text>
+      <text>我的歌单</text>
     </view>
     <view class="navItem">
       <text class="iconfont icon-icon-ranking"></text>
@@ -36,8 +36,8 @@
     <NavHeader title="推荐歌曲" nav="为你精心推荐"></NavHeader>
 
     <!-- 内容区 -->
-    <scroll-view class="recommendScroll" enable-flex scroll-x>
-      <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" wx:for-item="recommendItem">
+    <scroll-view class="recommendScroll" enable-flex scroll-x  >
+      <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" wx:for-item="recommendItem" bindtap="toSongs" data-id='{{recommendItem.id}}' data-index="{{index}}" >
         <image src="{{recommendItem.picUrl}}"></image>
         <text>{{recommendItem.name}}</text>
       </view>

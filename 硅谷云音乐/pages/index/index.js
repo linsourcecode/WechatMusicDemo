@@ -8,6 +8,7 @@ Page({
     bannerList: [], // 轮播图数据
     recommendList: [], // 推荐歌单
     topList: [], // 排行榜数据
+
   },
 
   /**
@@ -43,7 +44,7 @@ Page({
     while (index < 5){
       let topListData = await request('/top/list', {idx: index++});
       // splice(会修改原数组，可以对指定的数组进行增删改) slice(不会修改原数组)
-      let topListItem = {name: topListData.playlist.name, tracks: topListData.playlist.tracks.slice(0, 3)};
+      let topListItem = {name: topListData.playlist.name, tracks: topListData.playlist.tracks.slice(0, 5)};
       resultArr.push(topListItem);
       // 不需要等待五次请求全部结束才更新，用户体验较好，但是渲染次数会多一些
       this.setData({
@@ -56,11 +57,27 @@ Page({
     //   topList: resultArr
     // })
   },
+
   
   // 跳转至recommendSong页面的回调
-  toRecommendSong(){
+  toRecommendSong(e){
+    let {id,index} = e.currentTarget.dataset
+    console.log(id)
+
     wx.navigateTo({
+
       url: '/songPackage/pages/recommendSong/recommendSong'
+    })
+  },
+  toSongs:function (e){
+    let {id, index} = e.currentTarget.dataset;
+    console.log("数据",id,index)
+    this.toSong()
+  },
+  //跳转到推荐的歌单
+  toSong(){
+    wx.navigateTo({
+      url: '/pages/songs/songs'
     })
   },
   // 跳转至other页面

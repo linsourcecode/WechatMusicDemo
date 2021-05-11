@@ -92,6 +92,7 @@ Page({
       
       // 跳转至个人中心personal页面
       wx.reLaunch({
+
         url: '/pages/personal/personal'
       })
     }else if(result.code === 400){
