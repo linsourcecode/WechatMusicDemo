@@ -58,26 +58,34 @@ Page({
     // })
   },
 
-  
+  //https://music.163.com/api/playlist/detail?id=6644781537
   // 跳转至recommendSong页面的回调
   toRecommendSong(e){
-    let {id,index} = e.currentTarget.dataset
-    console.log(id)
-
     wx.navigateTo({
-
       url: '/songPackage/pages/recommendSong/recommendSong'
+    })
+  },
+  // 跳转至songDetail页面
+  toSongDetail(event){
+    let {song} = event.currentTarget.dataset;
+    console.log("歌曲的id是",song)
+    // 路由跳转传参： query参数
+    wx.navigateTo({
+      // 不能直接将song对象作为参数传递，长度过长，会被自动截取掉
+      // url: '/pages/songDetail/songDetail?songPackage=' + JSON.stringify(songPackage)
+      url: '/songPackage/pages/songDetail/songDetail?musicId=' + song
     })
   },
   toSongs:function (e){
     let {id, index} = e.currentTarget.dataset;
     console.log("数据",id,index)
-    this.toSong()
+    this.toSong(id)
   },
   //跳转到推荐的歌单
-  toSong(){
-    wx.navigateTo({
-      url: '/pages/songs/songs'
+  toSong(id){
+
+    wx.redirectTo({
+      url: '/pages/songs/songs?id='+id,
     })
   },
   // 跳转至other页面

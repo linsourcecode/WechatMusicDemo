@@ -32,7 +32,7 @@
 
   <!-- 推荐歌曲区域 -->
   <view class="recommendContainer">
-    <!-- 头部区域 -->
+    <!-- 头部区域 -- >
     <NavHeader title="推荐歌曲" nav="为你精心推荐"></NavHeader>
 
     <!-- 内容区 -->
@@ -55,7 +55,7 @@
       <swiper-item wx:for="{{topList}}" wx:key="name">
         <view class="swiperItem">
           <view class="title">{{item.name}}</view>
-          <view class="musicItem" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem">
+          <view class="musicItem" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem"  data-song='{{musicItem.id}}' bindtap="toSongDetail">
             <image src="{{musicItem.al.picUrl}}"></image>
             <text class="count">{{index + 1}}</text>
             <text class="musicName">{{musicItem.name}}</text>
