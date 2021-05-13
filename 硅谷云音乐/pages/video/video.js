@@ -1,10 +1,14 @@
 import request from '../../utils/request'
 Page({
+  globalData: {
+    videoGroupListData:[]
+  },
 
   /**
    * 页面的初始数据
    */
   data: {
+
     videoGroupList: [], // 导航标签数据
     navId: '', // 导航的标识
     videoList: [], // 视频列表数据
@@ -23,23 +27,16 @@ Page({
     this.data.index = this.data.index+1
    
   },
-  
+
   // 获取导航数据
   async getVideoGroupListData(e){
-    let videoGroupListData = await request('/video/group/list');
-    let j = e
-    //videoGroupList.push(,
-    let list =videoGroupListData.data.slice(0+(j*14), j*14+14)
-    this.data.index = this.data.index+1
-
+     this.globalData.videoGroupListData = await request('/video/group/list');
     this.setData({
-      videoGroupList: list,
-      navId: videoGroupListData.data[0].id,
-
-
+      videoGroupList: this.globalData.videoGroupListData.data.slice(0, 14),
+      navId: this.globalData.videoGroupListData.data[0].id
     })
 
-  
+
     // 获取视频列表数据
     this.getVideoList(this.data.navId);
   },
@@ -60,8 +57,10 @@ Page({
     })
     this.setData({
       videoList,
-      isTriggered: false // 关闭下拉刷新
+
     })
+
+    console.log(videoList)
   },
 
   
@@ -162,21 +161,26 @@ Page({
   },
   
   // 自定义上拉触底的回调 scroll-view
- async  handleToLower(){
-    let videoGroupListData = await request('/video/group/list');
+   handleToLower(){
+    //let videoGroupListData = await request('/video/group/list');
     let j = this.data.index
 
-    let list =videoGroupListData.data.slice(0+(j*14), j*14+14)
+    let list =this.globalData.videoGroupListData.data.slice(0, j*6+6)
+    this.data.index = this.data.index +1
+    console.log(list)
 
-
-
-    let videoList = this.data.videoList;
     // 将视频最新的数据更新原有视频列表数据中
-    videoList.push(list);
-    this.setData({
-      videoList
-    })
-  },
+     this.setData({
+       videoGroupList: list,
+
+
+
+     })
+
+     // 获取视频列表数据
+     this.getVideoList(this.data.navId);
+
+   },
   // 跳转至搜索界面
   toSearch(){
     wx.navigateTo({
