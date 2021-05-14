@@ -5,7 +5,8 @@
     "pages/video/video",
     "pages/login/login",
     "pages/personal/personal",
-    "pages/songs/songs"
+    "pages/songs/songs",
+    "pages/register/register"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap.json",
