@@ -7,19 +7,19 @@
     </view>
     <view class='row'>
         <view class='info'>
-            <input  class= 'info-input' bindinput="handleInput" id="captcha" data-type="catcha" placeholder="请输入你的验证码" />
+            <input  class= 'info-input' bindinput="handleInput" id="captcha" data-type="captcha" placeholder="请输入你的验证码" />
         </view>
 
     </view>
     <view class='row'>
         <view class='info'>
-            <input type='nickname' class= 'info-input' id="nickname"  bindinput="handleInput" placeholder="请输入你的昵称" />
+            <input  data-type="nickname"  class= 'info-input' id="nickname"  bindinput="handleInput" placeholder="请输入你的昵称" />
         </view>
 
     </view>
     <view class='row'>
         <view class='info'>
-            <input  type='password' class= 'info-input' id="phone"  bindinput="handleInput" placeholder="输入你的密码" />
+            <input  data-type="password" class= 'info-input' id="password"  bindinput="handleInput" placeholder="输入你的密码" />
         </view>
 
     </view>

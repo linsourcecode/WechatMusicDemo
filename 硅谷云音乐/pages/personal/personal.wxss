@@ -28,8 +28,8 @@
   position:relative;
   z-index: 1;
 
-}
 
+}
 .user-info-box .portrait{
   width: 130rpx;
   height: 130rpx;

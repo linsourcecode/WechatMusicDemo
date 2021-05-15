@@ -57,7 +57,7 @@ Page({
   // 登录的回调
   async login(){
     // 1. 收集表单项数据
-    let {phone, password} = this.data;
+    let {phone, password,captcha, nickname} = this.data;
     // 2. 前端验证
     /*
     * 手机号验证：
@@ -94,12 +94,12 @@ Page({
 
 
     // 后端验证
-    let result = await request('/register/cellphone', {phone, password, captcha, nickname, isLogin: true})
+    let result = await request("/register/cellphone?phone="+phone+"/password="+password+"/captcha="+"/nickname="+nickname)
     if(result.code === 200){ // 登录成功
       wx.showToast({
-        title: '登录成功'
+        title: '注册成功'
       })
-      // 将用户的信息存储至本地
+     将用户的信息存储至本地
       wx.setStorageSync('userInfo', JSON.stringify(result.profile))
 
 
@@ -111,11 +111,6 @@ Page({
     }else if(result.code === 400){
       wx.showToast({
         title: '手机号错误',
-        icon: 'none'
-      })
-    }else if(result.code === 502){
-      wx.showToast({
-        title: '密码错误',
         icon: 'none'
       })
     }else {
