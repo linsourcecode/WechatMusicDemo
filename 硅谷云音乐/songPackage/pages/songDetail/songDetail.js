@@ -16,6 +16,7 @@ Page({
     currentTime: '00:00',  // 实时时间
     durationTime: '00:00', // 总时长
     currentWidth: 0, // 实时进度条的宽度
+
   },
 
   /**
@@ -27,6 +28,7 @@ Page({
     // console.log(JSON.parse(options.songPackage));
     
     let musicId = options.musicId;
+
     this.setData({
       musicId
     })

@@ -64,7 +64,7 @@ Page({
    * **/
   personfm:async function(){
     let person_datas =  await request('/personal_fm');
-    let index=2;
+
 
     this.setData({
           person_data:person_datas.data
@@ -77,7 +77,16 @@ Page({
   },
   toFmsong(event){
     console.log("第一个id是"+this.data.person_data[0].id)
+    // 路由跳转传参： query参数
+    wx.navigateTo({
+      // 不能直接将song对象作为参数传递，长度过长，会被自动截取掉
+      // url: '/pages/songDetail/songDetail?songPackage=' + JSON.stringify(songPackage)
+      url: '/pages/personfm/personfm?musicId=' + this.data.person_data[0].id
+    })
+
+
   },
+
 
   //https://music.163.com/api/playlist/detail?id=6644781537
   // 跳转至recommendSong页面的回调
