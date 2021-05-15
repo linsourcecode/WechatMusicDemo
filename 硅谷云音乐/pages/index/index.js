@@ -8,24 +8,27 @@ Page({
     bannerList: [], // 轮播图数据
     recommendList: [], // 推荐歌单
     topList: [], // 排行榜数据
+    person_data:[]
 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: async function (options) {
-    let bannerListData = await request('/banner', {type: 1});
-    this.setData({
-      bannerList: bannerListData.banners
-    })
-    
-    // 获取推荐歌单数据
-    let recommendListData = await request('/personalized', {limit: 10});
-    this.setData({
-      recommendList: recommendListData.result
-    })
-    
+    onLoad: async function (options) {
+      let bannerListData = await request('/banner', {type: 1});
+      this.setData({
+        bannerList: bannerListData.banners
+      })
+
+      // 获取推荐歌单数据
+      let recommendListData = await request('/personalized', {limit: 10});
+      this.setData({
+        recommendList: recommendListData.result
+      })
+
+
+
     
     // 获取排行榜数据
     /*
@@ -56,6 +59,24 @@ Page({
     // this.setData({
     //   topList: resultArr
     // })
+  },
+  /**获取私人FM
+   * **/
+  personfm:async function(){
+    let person_datas =  await request('/personal_fm');
+    let index=2;
+
+    this.setData({
+          person_data:person_datas.data
+    }
+
+
+
+    )
+    this.toFmsong()
+  },
+  toFmsong(event){
+    console.log("第一个id是"+this.data.person_data[0].id)
   },
 
   //https://music.163.com/api/playlist/detail?id=6644781537
