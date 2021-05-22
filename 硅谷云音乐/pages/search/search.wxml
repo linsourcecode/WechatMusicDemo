@@ -9,12 +9,12 @@
     <text class="cancel">取消</text>
   </view>
 
-  <block wx:if='{{searchList.length}}'>
+  <block wx:if='{{searchList.length}}' >
    <!-- 搜索内容展示 -->
-   <view class="showSearchContent">
+   <view class="showSearchContent"   >
      <view class="searchContent">搜索内容: {{searchContent}}</view>
      <view class="searchList">
-       <view class="searchItem" wx:for="{{searchList}}" wx:key="id">
+       <view class="searchItem" wx:for="{{searchList}}" wx:key="id"  data-index="{{index}}"  bindtap="get_index">
          <text class="iconfont icon-search1"></text>
          <text class="content">{{item.name}}</text>
        </view>

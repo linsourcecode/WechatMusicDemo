@@ -10,7 +10,8 @@ Page({
     hotList: [], // 热搜榜数据
     searchContent: '', // 用户输入的表单项数据
     searchList: [], // 关键字模糊匹配的数据
-    historyList: [], // 搜索历史记录
+    historyList: [],
+    index:0// 搜索历史记录
   },
 
   /**
@@ -32,7 +33,25 @@ Page({
       hotList: hotListData.data
     })
   },
-  
+  get_index:function (event){
+    let index = event.currentTarget.dataset.index
+    console.log(event.currentTarget.dataset.index)
+    this.setData({
+      index
+    })
+    this.toSongDetail(index)
+  },
+  // 跳转至songDetail页面
+  toSongDetail(index){
+    let songid = this.data.searchList[index].id
+    // 路由跳转传参： query参数
+    wx.navigateTo({
+      // 不能直接将song对象作为参数传递，长度过长，会被自动截取掉
+      // url: '/pages/songDetail/songDetail?songPackage=' + JSON.stringify(songPackage)
+
+      url: '/songPackage/pages/songDetail/songDetail?musicId=' + songid
+    })
+  },
   // 获取本地历史记录的功能函数
   getSearchHistory(){
     let historyList = wx.getStorageSync('searchHistory');
