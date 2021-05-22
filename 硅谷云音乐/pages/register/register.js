@@ -93,21 +93,17 @@ Page({
     }
 
 
-    // 后端验证
-    let result = await request("/register/cellphone?phone="+phone+"/password="+password+"/captcha="+"/nickname="+nickname)
+
+    let result = await request("/register/cellphone?phone="+phone+"&password="+password+"&captcha="+captcha+"&nickname="+nickname)
     if(result.code === 200){ // 登录成功
       wx.showToast({
         title: '注册成功'
       })
-     将用户的信息存储至本地
-      wx.setStorageSync('userInfo', JSON.stringify(result.profile))
+     //将用户的信息存储至本地
+     // wx.setStorageSync('userInfo', JSON.stringify(result.profile))
 
 
-      // 跳转至个人中心personal页面
-      wx.reLaunch({
-
-        url: '/pages/personal/personal'
-      })
+      
     }else if(result.code === 400){
       wx.showToast({
         title: '手机号错误',
@@ -115,7 +111,7 @@ Page({
       })
     }else {
       wx.showToast({
-        title: '登录失败，请重新登录',
+        title: '注册失败，请重新注册',
         icon: 'none'
       })
     }

@@ -8,9 +8,12 @@ Page({
     videoGroupList: [], // 导航标签数据
     navId: '', // 导航的标识
     videoList: [], // 视频列表数据
-    videoId: '', // 视频id标识
+    videoId: '',
+    userInfo: {},// 视频id标识
     videoUpdateTime: [], // 记录video播放的时长
-    isTriggered: false, // 标识下拉刷新是否被触发
+    isTriggered: false,
+    imageurl:'',// 标识下拉刷新是否被触发
+    index:0
   },
 
   /**
@@ -1819,23 +1822,34 @@ Page({
     console.log('页面的上拉触底');
 
   },
+  get_index:function (event){
+    let index = event.currentTarget.dataset.index
+    console.log(event.currentTarget.dataset.index)
+    this.setData({
+       index
+    })
+  },
+
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function ({from}) {
-    console.log(from);
+    // 读取用户的基本信息
+    let userInfo = wx.getStorageSync('userInfo');
+    if(userInfo){ // 用户登录
+      // 更新userInfo的状态
+      this.setData({
+        userInfo: JSON.parse(userInfo)
+      })}
+    let name= this.data.userInfo.nickname
+    let url = this.data.videoList[this.data.index].data.coverUrl
+    console.log("用户名为",this.data.userInfo.nickname);
     if(from === 'button'){
       return {
-        title: '来自button的转发',
+        title: '来自'+name+'的转发',
         page: '/pages/video/video',
-        imageUrl: '/static/images/nvsheng.jpg'
-      }
-    }else {
-      return {
-        title: '来自menu的转发',
-        page: '/pages/video/video',
-        imageUrl: '/static/images/nvsheng.jpg'
+        imageUrl: url
       }
     }
     
