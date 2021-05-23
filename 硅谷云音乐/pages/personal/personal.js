@@ -12,7 +12,8 @@ Page({
     coverTransform: 'translateY(0)',
     coveTransition: '',
     userInfo: {}, // 用户信息
-    recentPlayList: [], // 用户播放记录
+    recentPlayList: [],
+    index :0 // 用户播放记录
   },
 
   /**
@@ -30,6 +31,33 @@ Page({
       // 获取用户播放记录
       this.getUserRecentPlayList(this.data.userInfo.userId)
     }
+  },
+  toSongDetail:function (event){
+    let {song, index} = event.currentTarget.dataset;
+    this.setData({
+      index
+    })
+    let id = this.data.recentPlayList[index].song.id
+    console.log("数据为",this.data.recentPlayList[index].song.name)
+    // 路由跳转传参： query参数
+    wx.navigateTo({
+      // 不能直接将song对象作为参数传递，长度过长，会被自动截取掉
+      // url: '/pages/songDetail/songDetail?songPackage=' + JSON.stringify(songPackage)
+      url: '/songPackage/pages/songDetail/songDetail?musicId=' + id
+    })
+
+  },
+  // 跳转至songDetail页面
+  toSongDetails(index){
+    console.log()
+    let id= this.data.recentPlayList[index].song.id
+
+    // 路由跳转传参： query参数
+    wx.navigateTo({
+      // 不能直接将song对象作为参数传递，长度过长，会被自动截取掉
+      // url: '/pages/songDetail/songDetail?songPackage=' + JSON.stringify(songPackage)
+      url: '/songPackage/pages/songDetail/songDetail?musicId=' + id
+    })
   },
   // 获取用户播放记录的功能函数
   async getUserRecentPlayList(userId){

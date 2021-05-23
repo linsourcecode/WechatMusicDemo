@@ -1,7 +1,7 @@
 <view class="recommendSongContainer">
     <!-- 头部  -->
     <view class="header">
-        <image src="{{recommendList.creator.avatarUrl}}"></image>
+        <image src="{{recommendList.result.coverImgUrl}}"></image>
 
     </view>
 
@@ -14,7 +14,7 @@
 
         <!-- 内容区 -->
         <scroll-view scroll-y class='listScroll'>
-            <view class="scrollItem" wx:for="{{recommendList.tracks}}" wx:key="id" data-index="{{index}}" data-song='{{item}}' bindtap="toSongDetail">
+            <view class="scrollItem" wx:for="{{recommendList.result.tracks}}" wx:key="id" data-index="{{index}}" data-song='{{item}}' bindtap="toSongDetail">
                 <image src="{{item.album.picUrl}}"></image>
                 <view class="musicInfo">
                     <text class="musicName">{{item.name}}</text>

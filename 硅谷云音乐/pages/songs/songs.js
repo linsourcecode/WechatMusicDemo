@@ -18,7 +18,7 @@ Page({
    */
   onLoad: function (options) {
     var id = options.id;
-    console.log("获取",id)
+    //console.log("歌曲数据的id获取",id)
     // 更新日期的状态数据
     this.setData({
       day: new Date().getDate(),
@@ -31,8 +31,9 @@ Page({
   // 获取用户每日推荐数据
   async getRecommendList(id){
     let recommendListData = await request('/playlist/detail?id='+id);
+    console.log(recommendListData)
     this.setData({
-      recommendList: recommendListData.result
+      recommendList: recommendListData
     })
   },
   /**

@@ -100,7 +100,7 @@ Page({
         title: '注册成功'
       })
      //将用户的信息存储至本地
-     // wx.setStorageSync('userInfo', JSON.stringify(result.profile))
+      wx.setStorageSync('userInfo', JSON.stringify(result.profile))
 
 
       
@@ -118,7 +118,7 @@ Page({
   },
   register(){
     wx.reLaunch({
-      url: '/pages/register/register'
+      url: '/pages/personal/personal'
     })
   },
 
