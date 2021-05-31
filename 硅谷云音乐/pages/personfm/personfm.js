@@ -116,24 +116,30 @@ Page({
       isPlay
     })
 
-    // 修改全局音乐播放的状态
-    appInstance.globalData.isMusicPlay = isPlay;
+
   },
   // 获取音乐详情的功能函数
   async getMusicInfo(musicId){
-    
+
     let songData = await request('/song/detail', {ids: musicId});
     // songData.songs[0].dt 单位ms
     let durationTime = moment(songData.songs[0].dt).format('mm:ss');
     this.setData({
       song: songData.songs[0],
+      isplay: true,
       durationTime
     })
+
+
 
     // 动态修改窗口标题
     wx.setNavigationBarTitle({
       title: this.data.song.name
     })
+
+
+
+
   },
   // 点击播放/暂停的回调
   handleMusicPlay(){
@@ -188,7 +194,8 @@ Page({
     let type = event.currentTarget.id;
     if(type === 'pre'){ // 上一首
       (this.data.indexline === 0) && (this.data.indexline = this.data.person_data.length);
-      this.data.indexline -= 1;
+     if(this.data.indexline>0){
+      this.data.indexline -= 1;}
     }else { // 下一首
       (this.data.indexline === this.data.person_data.length - 1) && (this.data.indexline = -1);
       this.data.indexline += 1;
@@ -198,7 +205,11 @@ Page({
     this.personfm()
     let index = this.data.indexline
     console.log("切歌",this.data.person_data[index])
+    this.setData({
+      musicId:this.data.person_data[this.data.indexline].id
+    })
     this.getMusicInfo(this.data.person_data[this.data.indexline].id);
+
     /* 订阅来自recommendSong页面发布的musicId消息
     PubSub.subscribe('musicId', (msg, musicId) => {
       // console.log(musicId);

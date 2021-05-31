@@ -103,6 +103,7 @@ Page({
   
     // 修改全局音乐播放的状态
     appInstance.globalData.isMusicPlay = isPlay;
+
   },
   // 获取音乐详情的功能函数
   async getMusicInfo(musicId){
