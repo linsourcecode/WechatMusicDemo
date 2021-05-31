@@ -1,5 +1,6 @@
 // pages/songs/songs.js
 import request from "../../utils_user/request";
+import PubSub from "pubsub-js";
 
 Page({
 
@@ -25,7 +26,29 @@ Page({
       month: new Date().getMonth() + 1
     })
     // 获取每日推荐的数据
-    this.getRecommendList(id);
+    this.getRecommendList(id)
+    // 订阅来自songDetail页面发布的消息
+    PubSub.subscribe('switchType', (msg, type) => {
+          let {recommendList, index} = this.data;
+          if(type === 'pre'){ // 上一首
+            (index === 0) && (index = recommendList.length);
+            index -= 1;
+          }else { // 下一首
+            (index === recommendList.length - 1) && (index = -1);
+            index += 1;
+          }
+
+          // 更新下标
+          this.setData({
+            index
+          })
+          //recommendList.result.tracks
+         console.log(recommendList.result.tracks[0])
+          let musicId = recommendList.result.tracks[index].id;
+          // 将musicId回传给songDetail页面
+          PubSub.publish('musicId', musicId)
+    });
+
 
   },
   // 获取用户每日推荐数据

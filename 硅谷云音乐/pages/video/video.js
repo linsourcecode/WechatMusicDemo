@@ -1834,7 +1834,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function ({from}) {
+   onShareAppMessage: function ({from}) {
     // 读取用户的基本信息
     let userInfo = wx.getStorageSync('userInfo');
     if(userInfo){ // 用户登录

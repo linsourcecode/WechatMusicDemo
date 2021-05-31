@@ -19,7 +19,7 @@
 
   </view>
   <view class="register-section" bindtap="register">
-   
+
     <text >注册或修改密码</text>
   </view>
 </view>
