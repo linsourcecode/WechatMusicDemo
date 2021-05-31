@@ -121,6 +121,7 @@ Page({
   },
   // 获取音乐详情的功能函数
   async getMusicInfo(musicId){
+    
     let songData = await request('/song/detail', {ids: musicId});
     // songData.songs[0].dt 单位ms
     let durationTime = moment(songData.songs[0].dt).format('mm:ss');
@@ -167,15 +168,38 @@ Page({
     }
 
   },
+  /**获取私人FM
+   * **/
+  personfm:async function(){
+    let person_datas =  await request('/personal_fm');
+    console.log(person_datas)
+    let list = this.data.person_data.concat(person_datas.data)
+    console.log("完整数据",list)
+
+    this.setData({
+          person_data:list
+        })
+
+  },
 
   // 点击切歌的回调
   handleSwitch(event){
     // 获取切歌的类型
     let type = event.currentTarget.id;
-
+    if(type === 'pre'){ // 上一首
+      (this.data.indexline === 0) && (this.data.indexline = this.data.person_data.length);
+      this.data.indexline -= 1;
+    }else { // 下一首
+      (this.data.indexline === this.data.person_data.length - 1) && (this.data.indexline = -1);
+      this.data.indexline += 1;
+    }
     // 关闭当前播放的音乐
     this.backgroundAudioManager.stop();
-    // // 订阅来自recommendSong页面发布的musicId消息
+    this.personfm()
+    let index = this.data.indexline
+    console.log("切歌",this.data.person_data[index])
+    this.getMusicInfo(this.data.person_data[this.data.indexline].id);
+    /* 订阅来自recommendSong页面发布的musicId消息
     PubSub.subscribe('musicId', (msg, musicId) => {
       // console.log(musicId);
 
@@ -187,7 +211,8 @@ Page({
       PubSub.unsubscribe('musicId');
     })
     // 发布消息数据给recommendSong页面
-    PubSub.publish('switchType', type)
+    PubSub.publish('switchType', type)*/
+
   },
 
   /**
