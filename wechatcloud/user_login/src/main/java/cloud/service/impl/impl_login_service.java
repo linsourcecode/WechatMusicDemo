@@ -21,9 +21,11 @@ public class impl_login_service implements login_service {
         java.sql.Date sql_date = new java.sql.Date(date.getTime()); //转换成java.sql.Date
         User_login user_login=new User_login(id,sql_date,0,0);
        try {
+           log.info("传递的数据为",id);
            user_logindao.add_login(user_login);
        }
         catch (Exception e){
+           e.printStackTrace();
            log.error("插入主键重复，更新登录次数");
            user_logindao.count_login_time(id);
 

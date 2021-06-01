@@ -6,6 +6,6 @@
         insert into user(id,date,rank,time)  values(#{id},#{date},#{rank},#{time});
     </insert>
     <update id="count_login_time" parameterType="String">
-        update user set time=#{time}+1
+        update user set time=time+1
     </update>
 </mapper>
