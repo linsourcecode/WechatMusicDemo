@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 public class User_login_Controller {
      @Resource
      private login_service login_service;
-     @PostMapping(value="/login/{id}")
+     @RequestMapping(value="/login/{id}")
     public CommonResult post(@PathVariable("id")  long id){
             log.info("数据为",id);
             String ids = String.valueOf(id);
