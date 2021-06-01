@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cloud.dao.User_logindao">
+    <insert id="add_login" parameterType="cloud.entities.User_login" >
+        insert into user(id,date,rank,time)  values(#{id},#{date},#{rank},#{time});
+    </insert>
+    <update id="count_login_time" parameterType="String">
+        update user set time=#{time}+1
+    </update>
+</mapper>
