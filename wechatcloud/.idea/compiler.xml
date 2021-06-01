@@ -8,9 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user_login" />
-        <module name="wechat-api-commons" />
         <module name="order_wechat80" />
+        <module name="wechat-service-zookpeer" />
+        <module name="wechat-api-commons" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="order_wechat80" target="8" />
+      <module name="user_login" target="8" />
+      <module name="wechat-api-commons" target="8" />
+      <module name="wechat-service-zookpeer" target="8" />
+      <module name="wechatcloud" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

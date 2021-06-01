@@ -7,5 +7,7 @@
     <file url="file://$PROJECT_DIR$/user_login/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wechat-api-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wechat-api-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wechat-service-zookpeer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wechat-service-zookpeer/src/main/resources" charset="UTF-8" />
   </component>
 </project>

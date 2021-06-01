@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: user-login-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: ${spring.application.name}
   datasource:
     type:  com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
@@ -32,14 +39,3 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.cloud.entities    # 所有Entity别名类所在包
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
-      #defaultZone: http://eureka7001.com:7001/eureka
-      defaultZone:  http://localhost:7001/eureka
-  instance:
-      instance-id: payment8001
-      prefer-ip-address: true     #访问路径可以显示IP地址

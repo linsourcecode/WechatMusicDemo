@@ -5,10 +5,14 @@ import cloud.User_loginMain;
 import cloud.entities.CommonResult;
 import cloud.entities.User_login;
 import cloud.service.login_service;
+
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 
 @RestController
 @Slf4j
@@ -25,6 +29,14 @@ public class User_login_Controller {
             return new CommonResult(200,"成功");
 
      }
+     @Value("${server.port}")
+    private String serverPort;
+
+    @RequestMapping(value = "/payment/consul")
+    public String paymentConsul()
+    {
+        return "springcloud with consul: "+serverPort+"\t   "+ UUID.randomUUID().toString();
+    }
 
 
 
