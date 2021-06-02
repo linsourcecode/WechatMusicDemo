@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/order_wechat80/order_wechat80.iml" filepath="$PROJECT_DIR$/order_wechat80/order_wechat80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/song_info/song_info.iml" filepath="$PROJECT_DIR$/song_info/song_info.iml" />
       <module fileurl="file://$PROJECT_DIR$/user_login/user_login.iml" filepath="$PROJECT_DIR$/user_login/user_login.iml" />
       <module fileurl="file://$PROJECT_DIR$/wechat-api-commons/wechat-api-commons.iml" filepath="$PROJECT_DIR$/wechat-api-commons/wechat-api-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/wechat-service-zookpeer/wechat-service-zookpeer.iml" filepath="$PROJECT_DIR$/wechat-service-zookpeer/wechat-service-zookpeer.iml" />

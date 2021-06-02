@@ -13,6 +13,7 @@
         <module>order_wechat80</module>
         <module>wechat-api-commons</module>
         <module>wechat-service-zookpeer</module>
+        <module>song_info</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->

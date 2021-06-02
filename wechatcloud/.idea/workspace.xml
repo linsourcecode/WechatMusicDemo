@@ -5,25 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158a0bfe-3c1a-442c-9745-e18e27096e73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/dao/count_Userdao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_login/src/main/resources/mapper/count_userMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/song_info.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/Song_infoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/dao/Song_infodao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/song_info_service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/src/main/resources/mapper/User_loginMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/song_info/src/main/resources/mapper/count_userMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/Song_info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/controller/User_login_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/controller/User_login_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/dao/User_logindao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/dao/User_logindao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/impl/impl_login_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/impl/impl_login_service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/login_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/login_service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/target/classes/cloud/controller/User_login_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/target/classes/cloud/controller/User_login_Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/target/classes/cloud/dao/User_logindao.class" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/target/classes/cloud/dao/User_logindao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/target/classes/cloud/service/impl/impl_login_service.class" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/target/classes/cloud/service/impl/impl_login_service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_login/user_login.iml" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/user_login.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_count.java" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_count.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_login.java" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/classes/cloud/entities/User_count.class" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/classes/cloud/entities/User_count.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/classes/cloud/entities/User_login.class" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/classes/cloud/entities/User_login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/wechat-api-commons-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/wechat-api-commons-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,10 +62,11 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/song_info/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,6 +80,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\学习文件\微信小程序\相关资料\相关资料\03. 代码\wechatcloud\song_info\src\main\resources" />
       <recent name="G:\学习文件\微信小程序\相关资料\相关资料\03. 代码\wechatcloud\order_wechat80\src\main\resources" />
       <recent name="G:\学习文件\微信小程序\相关资料\相关资料\03. 代码\wechatcloud\user_login\src\main\resources" />
       <recent name="G:\学习文件\微信小程序\相关资料\相关资料\03. 代码\wechatcloud\user_login\src\main\java" />
@@ -160,7 +158,7 @@
       <workItem from="1622540977390" duration="32000" />
       <workItem from="1622541021863" duration="483000" />
       <workItem from="1622546553917" duration="8802000" />
-      <workItem from="1622608408552" duration="3626000" />
+      <workItem from="1622608408552" duration="6454000" />
     </task>
     <servers />
   </component>

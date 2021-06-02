@@ -10,11 +10,13 @@
         <module name="user_login" />
         <module name="order_wechat80" />
         <module name="wechat-service-zookpeer" />
+        <module name="song_info" />
         <module name="wechat-api-commons" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="order_wechat80" target="8" />
+      <module name="song_info" target="8" />
       <module name="user_login" target="8" />
       <module name="wechat-api-commons" target="8" />
       <module name="wechat-service-zookpeer" target="8" />
