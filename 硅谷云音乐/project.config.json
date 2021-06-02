@@ -6,6 +6,7 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -21,12 +22,11 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"enhance": true
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.13.1",
-	"appid": "wxa12bd581d1e51a1d",
+	"appid": "wxecdaeb678d5fbf62",
 	"projectname": "guiguyunyinyue_study",
 	"debugOptions": {
 		"hidedInDevtools": []

@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158a0bfe-3c1a-442c-9745-e18e27096e73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/song_info/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/song_info.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/Song_infoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/dao/Song_infodao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/song_info_service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/src/main/resources/mapper/User_loginMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/song_info/src/main/resources/mapper/count_userMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/Song_info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_66.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/song_info.iml" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/song_info.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../硅谷云音乐/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/static/images/nvsheng.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/static/images/recommendSong/02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/static/images/recommendSong/08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../硅谷云音乐/utils/request.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,14 +95,16 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderMain80">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.Song_infoMain">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,6 +118,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.OrderMain80" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Song_infoMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="song_info" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cloud.Song_infoMain" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,6 +150,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Song_infoMain" />
         <item itemvalue="Spring Boot.User_loginMain" />
       </list>
     </recent_temporary>
@@ -159,6 +170,7 @@
       <workItem from="1622541021863" duration="483000" />
       <workItem from="1622546553917" duration="8802000" />
       <workItem from="1622608408552" duration="6454000" />
+      <workItem from="1622635060261" duration="6695000" />
     </task>
     <servers />
   </component>
