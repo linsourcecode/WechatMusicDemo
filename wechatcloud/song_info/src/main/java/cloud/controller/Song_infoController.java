@@ -4,23 +4,32 @@ package cloud.controller;
 
 
 
+import cloud.entities.Song_info;
+import cloud.service.impl.Song_info_service_info;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 import java.net.*;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 @RestController
 @Slf4j
 public class Song_infoController {
+    @Resource
+    private Song_info_service_info song_info_service_info;
     @RequestMapping("/songinfo")
     public void save() throws IOException {
 
@@ -41,21 +50,22 @@ public class Song_infoController {
        // String code = jsonObject.getString("weekData");
        // System.out.println(code);
         list = jsonObject.getJSONArray("weekData");
+        List<Song_info> song_infos=new ArrayList<>();
         // 遍历JSONArray
         for (Iterator<Object> iterator = list.iterator(); iterator.hasNext(); ) {
             JSONObject next = (JSONObject) iterator.next();
             //System.err.println("a ===>>> " + next.getString("song"));
             String songinfo = next.getString("song");
             Integer playCount = next.getInteger("playCount");
-            Integer score = next.getInteger("score");
+            Integer scores = next.getInteger("score");
 
             JSONObject jsonObject1=JSONObject.parseObject(songinfo);
 
             String name= jsonObject1.getString("name");
-            System.out.println("************"+name);
-            Integer songid = jsonObject.getInteger("id");
+            System.out.println("************"+jsonObject1.getBigInteger("id"));
+            BigInteger songid = jsonObject.getBigInteger("id");
             String ar= jsonObject1.getString("ar");
-            System.out.println("************"+ar);
+            System.out.println("************"+ar+name+" "+scores+playCount+songid);
 
             JSONArray jsonArray=JSONArray.parseArray(ar);
 
@@ -65,13 +75,20 @@ public class Song_infoController {
             String line= jsonArray.getString(0);
             JSONObject jsonObject2=JSONObject.parseObject(line);
             System.out.println(jsonObject2.getString("name"));
+            String singer=jsonObject2.getString("name");
 
-
-
-
+            Song_info song_info=new Song_info();
+            song_info.setSongid(jsonObject1.getBigInteger("id"));
+            song_info.setSongname(name);
+            song_info.setScore(scores);
+            song_info.setPlay_time(playCount);
+            song_info.setSinger(singer);
+            song_infos.add(song_info);
+            System.out.println(song_info.toString());
 
 
         }
+        song_info_service_info.save_user_info(song_infos);
 
 
 

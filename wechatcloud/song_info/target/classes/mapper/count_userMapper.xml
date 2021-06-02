@@ -3,7 +3,7 @@
 
 <mapper namespace="cloud.dao.Song_infodao">
     <insert id="add_count" parameterType="cloud.entities.Song_info" >
-        insert into song_info(songid,songname,score,playtime,singer)  values(#{songid},#{songname},#{score},#{playtime},#{singer});
+        insert into song_info(songid,songname,score,play_time,singer)  values(#{songid},#{songname},#{score},#{play_time},#{singer});
     </insert>
 
 </mapper>
