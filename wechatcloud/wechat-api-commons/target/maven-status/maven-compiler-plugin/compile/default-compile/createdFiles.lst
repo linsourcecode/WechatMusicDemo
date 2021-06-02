@@ -1,2 +1,3 @@
 cloud\entities\User_login.class
 cloud\entities\CommonResult.class
+cloud\entities\User_count.class

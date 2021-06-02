@@ -1,5 +1,6 @@
 package cloud.entities;
 
+import cn.hutool.core.date.DateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User_count {
-    String id;
-    int time;
+    long id;
+    DateTime date;
 
 }

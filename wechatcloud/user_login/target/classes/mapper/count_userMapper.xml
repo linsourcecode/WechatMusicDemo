@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cloud.dao.count_Userdao">
+    <insert id="setUser_count" parameterType="cloud.entities.User_count" >
+        insert into login_count(id,date)  values(#{id},#{date});
+    </insert>
+
+</mapper>
