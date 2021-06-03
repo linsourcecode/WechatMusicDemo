@@ -5,6 +5,7 @@ package cloud.controller;
 
 
 import cloud.entities.Song_info;
+import cloud.entities.User_song;
 import cloud.service.impl.Song_info_service_info;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -13,6 +14,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -92,15 +95,16 @@ public class Song_infoController {
 
 
     }
-    @RequestMapping("/countsong/{userid}")
-    public void count_song(@PathVariable("userid") BigInteger userid,@RequestParam(name = "songid") BigInteger songid) {
+    @ResponseBody
+    @RequestMapping("/countsong/{songid}/{userid}")
+    public void count_song(@PathVariable BigInteger songid,@PathVariable BigInteger userid) {
     //,@RequestParam(value = "songid") BigInteger songid
-
-
-
-
-
-
+        //@PathVariable("userid") BigInteger userid
+    }
+    @ResponseBody
+    @RequestMapping("/test")
+    public void test(@RequestBody Song_info song_info) {
+        System.out.println(song_info.toString());
     }
 
 }

@@ -114,6 +114,28 @@ Page({
       song: songData.songs[0],
       durationTime
     })
+    console.log("歌曲名",this.data.song.name)
+    wx.request({
+      url: 'http://127.0.0.1:8002/test',
+      data:{
+         songname:this.data.song.name,
+         songid:this.data.song.id,
+         singer: this.data.song.ar[0].name
+
+      },
+      method: '',
+      header: {
+        "Content-Type": "application/json"
+      },
+      success: (res) => {
+        var data = JSON.stringify(res.data);
+        var jdata = JSON.parse(data);
+      },
+      fail: () => {
+        console.log('获取验证码接口失败');
+      }
+    })
+
     
     // 动态修改窗口标题
     wx.setNavigationBarTitle({

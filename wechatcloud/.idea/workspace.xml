@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158a0bfe-3c1a-442c-9745-e18e27096e73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order_wechat80/src/main/java/cloud/service/SongFeginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_wechat80/src/main/java/cloud/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order_wechat80/src/main/java/cloud/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_wechat80/target/classes/cloud/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/order_wechat80/target/classes/cloud/controller/OrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_info/src/main/java/cloud/dao/Song_infodao.java" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/dao/Song_infodao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/impl/Song_info_service_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/impl/Song_info_service_info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_info/src/main/resources/mapper/count_userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/resources/mapper/count_userMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/song_info/target/classes/cloud/controller/Song_infoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/cloud/controller/Song_infoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_info/target/classes/cloud/dao/Song_infodao.class" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/cloud/dao/Song_infodao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_info/target/classes/cloud/service/impl/Song_info_service_info.class" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/cloud/service/impl/Song_info_service_info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/song_info/target/classes/mapper/count_userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/mapper/count_userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_song.java" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_song.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +162,7 @@
       <workItem from="1622546553917" duration="8802000" />
       <workItem from="1622608408552" duration="6454000" />
       <workItem from="1622635060261" duration="11311000" />
-      <workItem from="1622695494702" duration="4767000" />
+      <workItem from="1622695494702" duration="9462000" />
     </task>
     <servers />
   </component>
