@@ -10,9 +10,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpMethod;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.io.BufferedReader;
@@ -30,8 +28,8 @@ import java.util.List;
 public class Song_infoController {
     @Resource
     private Song_info_service_info song_info_service_info;
-    @RequestMapping("/songinfo")
-    public void save() throws IOException {
+    @RequestMapping("/songinfo/{id}")
+    public void save(@PathVariable("id") BigInteger userid) throws IOException {
 
         String ur = "http://localhost:3000/user/record?uid=1495025170&type=1";
 
@@ -94,4 +92,15 @@ public class Song_infoController {
 
 
     }
+    @RequestMapping("/countsong/{userid}")
+    public void count_song(@PathVariable("userid") BigInteger userid,@RequestParam(name = "songid") BigInteger songid) {
+    //,@RequestParam(value = "songid") BigInteger songid
+
+
+
+
+
+
+    }
+
 }

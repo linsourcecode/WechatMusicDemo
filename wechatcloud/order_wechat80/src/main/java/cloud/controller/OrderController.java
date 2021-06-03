@@ -2,6 +2,7 @@ package cloud.controller;
 
 import cloud.entities.CommonResult;
 
+import cloud.service.SongFeginService;
 import cloud.service.loginFeginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.math.BigInteger;
 
 /**
  * @auther zzyy
@@ -22,6 +24,8 @@ public class OrderController
     public static final String INVOKE_URL = "http://user-login-service";
     @Resource
     private loginFeginService loginFeginService;
+    @Resource
+    private SongFeginService songFeginService;
 
     //public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
 
@@ -47,7 +51,17 @@ public class OrderController
 
         return loginFeginService.post(id);
     }
+    //记录播放信息
+    @RequestMapping( "/songrecord/{id}")
+    public CommonResult  count(@PathVariable("id") BigInteger userid)
+    {
+        System.out.println("数据为"+userid);
 
+
+        return  songFeginService.post(userid);
+
+
+    }
 
     }
 

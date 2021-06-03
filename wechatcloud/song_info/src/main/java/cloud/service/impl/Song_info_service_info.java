@@ -16,7 +16,12 @@ public class Song_info_service_info implements song_info_service {
     @Override
     public void save_user_info(List<Song_info> song_info) {
         for(Song_info song_info1:song_info){
-            song_infodao.add_count(song_info1);
+
+          try{
+            song_infodao.add_count(song_info1);}
+          catch (Exception e){
+              song_infodao.update_count(song_info1.getSongid());
+          }
         }
 
 

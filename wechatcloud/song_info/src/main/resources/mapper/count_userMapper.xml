@@ -6,4 +6,8 @@
         insert into song_info(songid,songname,score,play_time,singer)  values(#{songid},#{songname},#{score},#{play_time},#{singer});
     </insert>
 
+    <select id="update_count" parameterType="BigInteger">
+        update  song_info set play_time=play_time+1 where songid in
+        (select  songid from  (select  songid from song_info where songid= #{songid} ) as a )
+    </select>
 </mapper>
