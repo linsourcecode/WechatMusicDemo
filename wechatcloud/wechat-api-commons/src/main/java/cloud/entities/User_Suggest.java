@@ -5,16 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigInteger;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Song_info {
-
-    private BigInteger songid;
-    private String singer;
-    private Integer score;
-    private String songname;
-    private Integer play_time;
-
+public class User_Suggest {
+    private BigInteger id;
+    private String email;
+    private String suggest;
 }

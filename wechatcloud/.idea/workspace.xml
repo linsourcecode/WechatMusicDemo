@@ -5,9 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158a0bfe-3c1a-442c-9745-e18e27096e73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/dao/SuggestDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_login/src/main/resources/mapper/User_suggest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/Play_Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_Suggest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/controller/Song_infoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/impl/Song_info_service_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/impl/Song_info_service_info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/song_info_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/java/cloud/service/song_info_service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/src/main/resources/mapper/count_userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/src/main/resources/mapper/count_userMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/song_info/target/classes/cloud/controller/Song_infoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/cloud/controller/Song_infoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/target/classes/cloud/service/impl/Song_info_service_info.class" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/cloud/service/impl/Song_info_service_info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/target/classes/cloud/service/song_info_service.class" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/cloud/service/song_info_service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/song_info/target/classes/mapper/count_userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/song_info/target/classes/mapper/count_userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/controller/User_login_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/controller/User_login_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/dao/count_Userdao.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/dao/count_Userdao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/impl/impl_login_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/impl/impl_login_service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/login_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/java/cloud/service/login_service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/src/main/resources/mapper/count_userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/src/main/resources/mapper/count_userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/target/classes/cloud/controller/User_login_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/target/classes/cloud/controller/User_login_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/target/classes/cloud/dao/count_Userdao.class" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/target/classes/cloud/dao/count_Userdao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_login/target/classes/cloud/service/impl/impl_login_service.class" beforeDir="false" afterPath="$PROJECT_DIR$/user_login/target/classes/cloud/service/impl/impl_login_service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/Song_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/Song_info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_song.java" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/src/main/java/cloud/entities/User_song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/classes/cloud/entities/User_song.class" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/classes/cloud/entities/User_song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wechat-api-commons/target/wechat-api-commons-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/wechat-api-commons/target/wechat-api-commons-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/../硅谷云音乐/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/pages/personal/personal.js" beforeDir="false" afterPath="$PROJECT_DIR$/../硅谷云音乐/pages/personal/personal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/pages/personal/personal.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/../硅谷云音乐/pages/personal/personal.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../硅谷云音乐/songPackage/pages/songDetail/songDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../硅谷云音乐/songPackage/pages/songDetail/songDetail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +51,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -89,13 +119,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Song_infoMain">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,8 +173,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Song_infoMain" />
         <item itemvalue="Spring Boot.User_loginMain" />
+        <item itemvalue="Spring Boot.Song_infoMain" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +194,8 @@
       <workItem from="1622546553917" duration="8802000" />
       <workItem from="1622608408552" duration="6454000" />
       <workItem from="1622635060261" duration="11311000" />
-      <workItem from="1622695494702" duration="9462000" />
+      <workItem from="1622695494702" duration="10217000" />
+      <workItem from="1622724173556" duration="6641000" />
     </task>
     <servers />
   </component>

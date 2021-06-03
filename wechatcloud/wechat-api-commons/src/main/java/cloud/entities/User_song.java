@@ -13,6 +13,6 @@ import java.math.BigInteger;
 public class User_song {
     private BigInteger id;
     private BigInteger songid;
-    DateTime date;
+    DateTime datetime;
 
 }

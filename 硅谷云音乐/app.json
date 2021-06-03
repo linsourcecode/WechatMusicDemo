@@ -7,7 +7,8 @@
     "pages/personal/personal",
     "pages/songs/songs",
     "pages/register/register",
-    "pages/personfm/personfm"
+    "pages/personfm/personfm",
+    "pages/suggest/suggest"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap.json",

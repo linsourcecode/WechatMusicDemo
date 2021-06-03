@@ -68,8 +68,8 @@
       </view>
 
       <view class="cardList">
-        <view class="card-item">
-          <text class="title">我的音乐</text>
+        <view class="card-item" bindtap="toSuggest">
+          <text class="title">联系客服</text>
           <text class="more"> > </text>
         </view>
         <view class="card-item">

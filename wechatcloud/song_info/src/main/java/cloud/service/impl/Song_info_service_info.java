@@ -2,6 +2,7 @@ package cloud.service.impl;
 
 import cloud.dao.Song_infodao;
 import cloud.entities.Song_info;
+import cloud.entities.User_song;
 import cloud.service.song_info_service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,12 @@ public class Song_info_service_info implements song_info_service {
           }
         }
 
+
+    }
+
+    @Override
+    public void count(User_song user_song) {
+        song_infodao.count(user_song);
 
     }
 }

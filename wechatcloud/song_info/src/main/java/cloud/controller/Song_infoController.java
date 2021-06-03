@@ -4,9 +4,11 @@ package cloud.controller;
 
 
 
+import cloud.entities.Play_Song;
 import cloud.entities.Song_info;
 import cloud.entities.User_song;
 import cloud.service.impl.Song_info_service_info;
+import cn.hutool.core.date.DateTime;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +25,7 @@ import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.net.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -103,8 +106,28 @@ public class Song_infoController {
     }
     @ResponseBody
     @RequestMapping("/test")
-    public void test(@RequestBody Song_info song_info) {
-        System.out.println(song_info.toString());
+    public void test(@RequestBody Play_Song play_song) {
+
+
+        Song_info song_info=new Song_info();
+        song_info.setSongid(play_song.getSongid());
+        song_info.setSinger(play_song.getSinger());
+        song_info.setSongname(play_song.getSongname());
+        song_info.setScore(0);
+        song_info.setPlay_time(1);
+        List<Song_info> song_infos=new ArrayList<>();
+        song_infos.add(song_info);
+        song_info_service_info.save_user_info(song_infos);
+        //设置登录次数
+        User_song user_song=new User_song();
+        user_song.setSongid(play_song.getSongid());
+        user_song.setId(play_song.getId());
+        Date date = new Date();
+        DateTime dateTime = new DateTime(date);
+        user_song.setDatetime(dateTime);
+        song_info_service_info.count(user_song);
+
+
     }
 
 }

@@ -3,6 +3,8 @@ package cloud.controller;
 
 import cloud.User_loginMain;
 import cloud.entities.CommonResult;
+import cloud.entities.Play_Song;
+import cloud.entities.User_Suggest;
 import cloud.entities.User_login;
 import cloud.service.login_service;
 
@@ -47,6 +49,17 @@ public class User_login_Controller {
     public String paymentConsul()
     {
         return "springcloud with consul: "+serverPort+"\t   "+ UUID.randomUUID().toString();
+    }
+
+    @RequestMapping("/suggest")
+    public void test(@RequestBody User_Suggest user_suggest) {
+        System.out.println("数据为"+user_suggest.toString());
+
+        login_service.setSuggest(user_suggest);
+
+
+
+
     }
 
 

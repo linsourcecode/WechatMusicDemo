@@ -15,7 +15,8 @@ Page({
     musicLink: '', // 音乐的链接
     currentTime: '00:00',  // 实时时间
     durationTime: '00:00', // 总时长
-    currentWidth: 0, // 实时进度条的宽度
+    currentWidth: 0,
+    userInfo:[]// 实时进度条的宽度
 
   },
 
@@ -28,6 +29,12 @@ Page({
     // console.log(JSON.parse(options.songPackage));
     
     let musicId = options.musicId;
+    let userInfo = wx.getStorageSync('userInfo');
+    if(userInfo){ // 用户登录
+      // 更新userInfo的状态
+      this.setData({
+        userInfo: JSON.parse(userInfo)
+      })}
 
     this.setData({
       musicId
@@ -120,7 +127,8 @@ Page({
       data:{
          songname:this.data.song.name,
          songid:this.data.song.id,
-         singer: this.data.song.ar[0].name
+         singer: this.data.song.ar[0].name,
+         id:this.data.userInfo.userId
 
       },
       method: '',

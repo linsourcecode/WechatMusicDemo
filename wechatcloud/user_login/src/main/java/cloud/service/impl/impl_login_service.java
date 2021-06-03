@@ -1,8 +1,10 @@
 package cloud.service.impl;
 
 import cloud.User_loginMain;
+import cloud.dao.SuggestDao;
 import cloud.dao.User_logindao;
 import cloud.dao.count_Userdao;
+import cloud.entities.User_Suggest;
 import cloud.entities.User_count;
 import cloud.entities.User_login;
 import cloud.service.login_service;
@@ -23,6 +25,8 @@ public class impl_login_service implements login_service {
     private User_logindao user_logindao;
     @Resource
     private count_Userdao count_userdao;
+    @Resource
+    private SuggestDao suggestDao;
     @Override
     public void add_login(long  id)  {
         Date date = new Date();
@@ -50,6 +54,12 @@ public class impl_login_service implements login_service {
 
     @Override
     public void count_login_time(String id) {
+
+    }
+
+    @Override
+    public void setSuggest(User_Suggest user_suggest){
+        suggestDao.setSuggest(user_suggest);
 
     }
 }

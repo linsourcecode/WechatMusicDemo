@@ -5,5 +5,7 @@
     <insert id="setUser_count" parameterType="cloud.entities.User_count" >
         insert into login_count(id,date)  values(#{id},#{date});
     </insert>
-
+    <insert id="setSuggest" parameterType="cloud.entities.User_Suggest">
+        insert  into suggest(id,email,suggest)values(#{id},#{email},#{suggest});
+    </insert>
 </mapper>

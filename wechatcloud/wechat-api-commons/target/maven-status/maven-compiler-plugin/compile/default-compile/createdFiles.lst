@@ -1,4 +1,5 @@
 cloud\entities\CommonResult.class
+cloud\entities\Play_Song.class
 cloud\entities\User_song.class
 cloud\entities\Song_info.class
 cloud\entities\User_login.class
