@@ -2,6 +2,8 @@ package cloud.controller;
 
 import cloud.entities.CommonResult;
 
+import cloud.entities.Play_Song;
+import cloud.entities.User_Suggest;
 import cloud.service.SongFeginService;
 import cloud.service.loginFeginService;
 import lombok.extern.slf4j.Slf4j;
@@ -62,7 +64,20 @@ public class OrderController
 
 
     }
+    @RequestMapping("/suggest")
+    public void test(@RequestBody User_Suggest user_suggest){
+
+        loginFeginService.run(user_suggest);
 
     }
+    @ResponseBody
+    @RequestMapping("/test")
+    public void test(@RequestBody Play_Song play_song){
+        log.error(String.valueOf(play_song));
+        songFeginService.test(play_song);
+    }
+
+
+}
 
 

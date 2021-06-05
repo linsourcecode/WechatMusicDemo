@@ -5,7 +5,8 @@
     <insert id="add_login" parameterType="cloud.entities.User_login" >
         insert into user(id,date,rank,time)  values(#{id},#{date},#{rank},#{time});
     </insert>
-    <update id="count_login_time" parameterType="String">
-        update user set time=time+1
+    <update id="count_login_time" parameterType="long">
+        update user set time=time+1 where id in
+         (select  id from  (select  id from user where id= #{id} ) as a )
     </update>
 </mapper>

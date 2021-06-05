@@ -21,7 +21,8 @@ Page({
    */
   data: {
     phone: '', // 手机号
-    password: '' // 用户密码
+    password: '',// 用户密码
+    userInfo:[]
   },
 
   /**
@@ -89,7 +90,7 @@ Page({
       // 将用户的信息存储至本地
       wx.setStorageSync('userInfo', JSON.stringify(result.profile))
 
-      
+      this.count_login()
       
       // 跳转至个人中心personal页面
       wx.reLaunch({
@@ -112,6 +113,34 @@ Page({
         icon: 'none'
       })
     }
+  },
+  count_login:function (){
+    let userInfo = wx.getStorageSync('userInfo');
+    console.log("记录登录")
+    if(userInfo){ // 用户登录
+      // 更新userInfo的状态
+      this.setData({
+        userInfo: JSON.parse(userInfo)
+      })}
+    wx.request({
+      url: 'http://bc512cloud.test.utools.club/login/'+this.data.userInfo.userId,
+      data:{
+
+
+      },
+      method: '',
+      header: {
+        "Content-Type": "application/json"
+      },
+      success: (res) => {
+        var data = JSON.stringify(res.data);
+        var jdata = JSON.parse(data);
+      },
+      fail: () => {
+        console.log('获取验证码接口失败');
+      }
+    })
+
   },
   register(){
     wx.reLaunch({

@@ -37,13 +37,14 @@ public class impl_login_service implements login_service {
            user_logindao.add_login(user_login);
        }
         catch (Exception e){
-           e.printStackTrace();
-           log.error("插入主键重复，更新登录次数");
-           user_logindao.count_login_time(id);
+
+            System.out.println(("插入主键重复，更新登录次数"));
+            user_logindao.count_login_time(id);
 
         }finally {
            //记录每次登录的时间
            User_count user_count=new User_count(id,time);
+           System.out.println("登录记录" +user_count.toString());
            count_userdao.setUser_count(user_count);
 
        }
@@ -59,6 +60,7 @@ public class impl_login_service implements login_service {
 
     @Override
     public void setSuggest(User_Suggest user_suggest){
+        System.out.println("插入数据库"+user_suggest.toString());
         suggestDao.setSuggest(user_suggest);
 
     }

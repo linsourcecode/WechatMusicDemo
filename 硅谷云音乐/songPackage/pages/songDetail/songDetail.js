@@ -123,7 +123,7 @@ Page({
     })
     console.log("歌曲名",this.data.song.name)
     wx.request({
-      url: 'http://127.0.0.1:8002/test',
+      url: 'http://bc512cloud.test.utools.club/test',
       data:{
          songname:this.data.song.name,
          songid:this.data.song.id,
