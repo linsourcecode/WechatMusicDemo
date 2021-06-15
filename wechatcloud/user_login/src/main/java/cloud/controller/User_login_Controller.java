@@ -20,6 +20,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 @RestController
 @Slf4j
@@ -35,8 +39,17 @@ public class User_login_Controller {
          System.out.println(str);
 
          log.info("数据为",id);
+         ExecutorService executor = Executors.newFixedThreadPool(4);
+         Future<String> f = executor.submit(new Callable<String>() {
 
-         login_service.add_login(id);
+             @Override
+             public String call() throws Exception {
+                 login_service.add_login(id);
+                 return "hello";
+             }
+         });
+
+
 
 
             return new CommonResult(200,"成功");
