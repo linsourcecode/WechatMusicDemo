@@ -11,8 +11,10 @@ import cloud.service.login_service;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -30,16 +32,20 @@ import java.util.concurrent.Future;
 public class User_login_Controller {
      @Resource
      private login_service login_service;
+     @Autowired
+    private KafkaTemplate<String, String> template;
      @RequestMapping(value="/login/{id}")
     public CommonResult post(@PathVariable("id")  long id){
-         Date date = new Date();
-         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-         String str = simpleDateFormat.format(date);
-         System.out.println("用日期类Date获取当前的系统时间为：" );
-         System.out.println(str);
+         //Date date = new Date();
+         //SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+         //String str = simpleDateFormat.format(date);
+         //System.out.println("用日期类Date获取当前的系统时间为：" );
+         //System.out.println(str);
 
          log.info("数据为",id);
-         ExecutorService executor = Executors.newFixedThreadPool(4);
+         //ExecutorService executor = Executors.newFixedThreadPool(4);
+         this.template.send("login_count",Long.toString(id));
+         /**
          Future<String> f = executor.submit(new Callable<String>() {
 
              @Override
@@ -48,7 +54,7 @@ public class User_login_Controller {
                  return "hello";
              }
          });
-
+**/
 
 
 

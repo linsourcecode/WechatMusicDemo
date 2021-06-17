@@ -31,6 +31,12 @@ spring:
       # 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。如果validationQuery为null，
       # testOnBorrow、testOnReturn、testWhileIdle都不会起作用。
       validation-query: select 1
+  kafka:
+    #Kafka服务器地址
+    bootstrap-servers: lin:9092
+    producer:
+      #设置数据value的序列化处理类
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 
 

@@ -32,6 +32,13 @@ spring:
       # testOnBorrow、testOnReturn、testWhileIdle都不会起作用。
       validation-query: select 1
 
+  kafka:
+    #Kafka服务器地址
+    bootstrap-servers: lin:9092
+    consumer:
+      #设置数据value的反序列化处理类
+      value-deserializer: org.apache.kafka.common.serialization.LongSerializer
+
 
 
 
